@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
+    behaviors {
         HYPER: mod_hyper {
             compatible = "zmk,behavior-mod-momentary";
             label = "HYPER";

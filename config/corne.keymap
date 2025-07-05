@@ -8,12 +8,12 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        HYPER: mod_hyper {
-            compatible = "zmk,behavior-mod-momentary";
+    macros {
+        HYPER: hyper_macro {
+            compatible = "zmk,behavior-macro";
             label = "HYPER";
             #binding-cells = <0>;
-            bindings = <(LCTRL|LALT|LGUI|LSHFT)>;
+            bindings = <&kp LCTRL &kp LALT &kp LGUI &kp LSHFT>;
         };
     };
 };

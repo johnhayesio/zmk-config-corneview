@@ -8,6 +8,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        hyper_macro {
+            compatible = "zmk,behavior-macro";
+            label = "HYPER";
+            bindings = <&kp LCTRL &kp LALT &kp LGUI &kp LSHFT>;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 

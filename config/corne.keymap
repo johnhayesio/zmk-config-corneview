@@ -7,6 +7,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+/* Global mod-tap tuning */
+&mt {
+    flavor = "tap-preferred";   /* prioritise letters over mods        */
+    tapping-term-ms = <275>;    /* increase tap window (default 200)   */
+    quick-tap-ms   = <150>;     /* ignore rapid re-presses as “hold”    */
+};
+
 / {
 };
 

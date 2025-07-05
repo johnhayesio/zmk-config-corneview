@@ -20,7 +20,7 @@
 
 / {
     behaviors {
-        hold_hyper_tap_tab {
+        hold_hyper_tap_tab: hold_hyper_tap_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "HYPER_TAB";
             #binding-cells = <0>;

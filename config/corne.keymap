@@ -8,10 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 
 /* Global mod-tap tuning */
+
 &mt {
     flavor = "tap-preferred";   /* prioritise letters over mods        */
     tapping-term-ms = <250>;    /* increase tap window (default 200)   */
-    quick-tap-ms   = <150>;     /* ignore rapid re-presses as “hold”    */
+    quick-tap-ms = <150>;     /* ignore rapid re-presses as “hold”    */
 };
 
 / {
@@ -23,11 +24,13 @@
 
         default_layer {
             bindings = <
-&trans  &kp Q               &kp W           &kp E               &kp R             &kp T      &kp Y        &kp U              &kp I               &kp O            &kp P                         &trans
-&trans  &mt LEFT_COMMAND A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G      &kp H        &mt RIGHT_SHIFT J  &mt LEFT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_COMMAND APOSTROPHE  &trans
-&trans  &kp Z               &kp X           &kp C               &kp V             &kp B      &kp N        &kp M              &kp COMMA           &kp DOT          &kp FSLH                      &trans
+&trans  &kp Q               &kp W           &kp E               &kp R             &kp T        &kp Y        &kp U              &kp I               &kp O            &kp P                         &trans
+&trans  &mt LEFT_COMMAND A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G        &kp H        &mt RIGHT_SHIFT J  &mt LEFT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_COMMAND APOSTROPHE  &trans
+&trans  &kp Z               &kp X           &kp C               &kp V             &kp B        &kp N        &kp M              &kp COMMA           &kp DOT          &kp FSLH                      &trans
                                             &lt 1 ESCAPE        &lt 2 SPACE       &lt 5 TAB    &lt 3 ENTER  &lt 4 BACKSPACE    &kp F18
             >;
+
+            label = "BASE";
         };
 
         sys_layer {
@@ -37,6 +40,8 @@
 &trans  &trans            &trans        &kp LG(LS(N5))    &kt LS(LA(LC(LG(F))))  &trans    &trans      &trans            &trans                &trans                &trans         &trans
                                         &trans            &trans                 &trans    &kp C_STOP  &kp C_PLAY_PAUSE  &kp C_MUTE
             >;
+
+            label = "SYS";
         };
 
         nav_layer {
@@ -46,6 +51,8 @@
 &trans  &trans            &trans        &trans            &trans          &trans    &kp INSERT     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &trans
                                         &trans            &trans          &trans    &kp RET        &kp BACKSPACE   &kp DELETE
             >;
+
+            label = "NAV";
         };
 
         sym_layer {
@@ -55,6 +62,8 @@
 &trans  &kp TILDE       &kp EXCL       &kp AT_SIGN           &kp HASH               &kp PIPE           &trans  &trans           &trans             &trans         &kp NON_US_BSLH   &trans
                                        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE     &trans  &trans           &trans
             >;
+
+            label = "SYM";
         };
 
         num_layer {
@@ -64,6 +73,8 @@
 &trans  &kp GRAVE         &kp N1  &kp N2      &kp N3  &kp BACKSLASH        &trans  &trans           &trans             &trans         &trans            &trans
                                   &kp PERIOD  &kp N0  &kp MINUS            &trans  &trans           &trans
             >;
+
+            label = "NUM";
         };
 
         fun_layer {
@@ -73,6 +84,8 @@
 &trans  &kp F10  &kp F1  &kp F2  &kp F3     &kp PAUSE_BREAK    &trans  &trans           &trans             &trans         &trans            &trans
                          &trans  &kp SPACE  &kp LG(TAB)        &trans  &trans           &trans
             >;
+
+            label = "FUN";
         };
     };
 };
